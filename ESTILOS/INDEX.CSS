@@ -1,0 +1,414 @@
+:root {
+  --white: #fff;
+  --black: #221f1f;
+  --lightpurple: #9e91f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  position: relative;
+  font: 16px/1.5 sans-serif;
+  color: var(--white);
+  background-image: url(fondo_tren.gif);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  min-width: 1000px;
+}
+.menu{
+  font-family: Dominick;
+}
+.trigger-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2;
+  background-color: black;
+  transition: transform 0.4s;
+}
+
+.page-header .trigger-menu {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--white);
+  letter-spacing: .2em;
+}
+
+.page-header .trigger-menu svg {
+  fill: var(--white);
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+.page-header .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  text-align: center;
+  padding: 15vh 0 5vh;
+  overflow: auto;
+  z-index: 1;
+  background-color: rgba(52,38,62,0.9);
+}
+
+.page-header .menu a {
+  font-size: 3rem;
+}
+
+.page-header .sub-menu a {
+  font-size: 1.5rem;
+}
+
+.page-main section {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.page-main section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  font-size: 0.85rem;
+  padding: 10px;
+  text-align: right;
+  color: var(--black);
+}
+
+.page-footer span {
+  color: #e31b23;
+}
+
+/* BODY CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu-open {
+  overflow: hidden;
+}
+
+.menu-open .trigger-menu-wrapper {
+  background: transparent;
+}
+
+.menu-open .page-header .menu {
+  display: block;
+}
+
+.menu-open .page-header svg {
+  transform: rotate(45deg);
+}
+
+.scroll-down .trigger-menu-wrapper {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .trigger-menu-wrapper {
+  transform: none;
+}
+
+.scroll-up:not(.menu-open) .trigger-menu-wrapper {
+  background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+/* barra sociales
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-130px;
+    top:230px;
+    width:210px;
+    z-index: 1100;
+}
+.sticky .oso{
+    list-style-type:none;
+    
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky .oso:hover{
+    margin-left:-50px;
+}
+.sticky .oso img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky .oso p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky .oso p .trueno{
+    text-decoration:none;
+    color:#2C3539;
+}
+.sticky .oso p .trueno:hover{
+    text-decoration:underline;
+}
+
+#Instagram{background:linear-gradient(10deg, #DAD71E, #D6621F, #BE1515, #BE15B9, #851E82)}
+
+#Facebook{background-color: #2668B8;}
+
+#Twitter{background-color: #268AB8;}
+
+#Google_plus {background-color: #B32A1C; }
+
+/* Quienes_Somos
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.Quienes_Somos{
+  margin-top: 10%;
+  background-color: rgba(52,38,62,0.9);
+}
+.Quienes{
+  background-color:rgba(108, 52, 131,0.9 );
+  font-size: 3em;
+  font-family: Dominick;
+  padding-left: 45%;
+}
+.Somos{
+  text-align: center;
+  font-size:25px;
+}
+
+/* Espacio_1
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.espacio1{
+  height:100px;
+}
+
+/* Mision
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+div#m_imagen{
+  color: white;
+  width: 500px;
+  height: 333px;
+  margin:30px;
+  background-color: rgba(52,38,62,0.9);
+  background-image: url(../IMAGENES/Programador/Mision_Vision/mision.png)
+}
+div#m_info{
+  position: absolute;
+  width: 500px;
+  height: 333px;
+  background-color: rgba(6,6,6,0.9);
+  border-radius:20px;
+  border:  white 4px;
+  -webkit-transition: opacity 0.2s;
+  opacity: 0;
+}
+p#m_info_2{
+  font-size:20px;
+  margin:auto;
+  width: 250px;
+  text-align: center;
+  margin-left: 130px;
+  margin-top: -10px;
+  -webkit-transition: margin 0.4s;
+}
+
+div#m_imagen:hover div#m_info{
+  opacity: 1;
+}
+p#m_headline{
+  font-family: Dominick;
+  position: absolute;
+  font-size: 3em;
+}
+div#m_imagen:hover p#m_headline{
+  margin-left: 42%;
+  transition: 0.2s;
+  -webkit-transition: margin 0.3s;
+}
+div#m_imagen:hover p#m_info_2{
+  margin-top: 121px;
+}
+div#m_imagen:hover{
+ border-radius:20px;}
+/* vision
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+div#v_imagen{
+  color: white;
+  width: 500px;
+  height: 333px;
+  margin:30px;
+  background-color: rgba(52,38,62,0.9);
+  background-image: url(../IMAGENES/Programador/Mision_Vision/mision.png)
+}
+div#v_info{
+  position: absolute;
+  width: 500px;
+  height: 333px;
+  background-color: rgba(6,6,6,0.9);
+  border-radius:20px;
+  border:  white 4px;
+  -webkit-transition: opacity 0.2s;
+  opacity: 0;
+}
+p#v_info_2{
+  font-size:20px;
+  margin:auto;
+  width: 250px;
+  text-align: center;
+  margin-left: 130px;
+  margin-top: -10px;
+  -webkit-transition: margin 0.4s;
+}
+
+div#v_imagen:hover div#v_info{
+  opacity: 1;
+}
+p#v_headline{
+  font-family: Dominick;
+  position: absolute;
+  font-size: 3em;
+}
+div#v_imagen:hover p#v_headline{
+  margin-left: 42%;
+  transition: 0.2s;
+  -webkit-transition: margin 0.3s;
+}
+div#v_imagen:hover p#v_info_2{
+  margin-top: 121px;
+}
+div#v_imagen:hover{
+ border-radius:20px;}
+ /* Espacio_2
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.espacio2{
+  height:100px;
+   /* Clientes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+}
+.Nuestros_clientes{
+  padding-left:45%;
+  font-family: Dominick;
+  font-size: 3em;
+  background-color:rgba(108, 52, 131,0.9 );
+}
+.tab2{
+  padding-left: 0%;
+  width: 98%;
+  text-align: center;
+  background-color: rgba(52,38,62,0.9);
+}
+.logo_confifrut{
+  margin-left: 25%;
+  height: 240px;
+}
+.logo_ut{
+  margin-left:25%;
+  height: 90px;
+}
+.logo_bm{
+  height: 180px;
+}
+.logo_structura{
+  height: 180px;
+}
+.logo_ASFA{
+  height: 90px;
+}
+ /* Espacio_3
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.espacio3{
+  height:80px;
+}
+ /* formulario
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+form{
+  width: 450px;
+  margin:auto;
+  background: rgba(0,0,0,0.4);
+  padding:10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+h2{
+  color: #fff;
+  text-align: center;
+  margin:0;
+  font-style: 30px;
+  margin-bottom: 20px;
+}
+
+input,textarea{
+
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border:none;
+}
+textarea{
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+#boton{
+  background-color: #31184A;
+  color: #fff;
+  padding:20px;
+}
+#boton:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 480px){
+  form{
+    width: 100%;
+  }
+}
